@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin generateYellow($x,$y,$z){
+    background-color:rgb($x,$y,$z);
+}
+.bg{
+    background-color: rgb(0, 0, 0);
+}
+@for $i from 1 to 256{
+    .bg-yellow-#{$i}{
+        @include generateYellow($i,$i ,0)
+    }
+    .box-#{$i} {
+        height: $i + 150px;
+        width: $i + 150px;
+      }
+}
+.box{
+    gap:15px;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.align{
+    align-items: center;
+}
+.justify{
+    justify-content: center;
+}
