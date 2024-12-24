@@ -7,11 +7,11 @@
     background-color:rgb($x,$y,$z);
 }
 .bg{
-    background-color: rgb(0, 0, 0);
+    background-color:rgb(232, 0, 0);
 }
 @for $i from 1 to 256{
     .bg-yellow-#{$i}{
-        @include generateYellow($i,$i ,0)
+        @include generateYellow($i,0 ,0)
     }
     .box-#{$i} {
         height: $i + 150px;
